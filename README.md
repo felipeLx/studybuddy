@@ -1,5 +1,5 @@
 # Study Buddy - Test Prep
-
+# Will work for all SIS students
 Simple, fun exercise app for test preparation. JSON-driven — add exercises per subject, deploy to Cloudflare Pages.
 
 ## Cloudflare Pages — Build Settings
