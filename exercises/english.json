@@ -12,10 +12,22 @@
           "type": "match",
           "instruction": "Match the action with its positive impact on nature. Drag or click to connect!",
           "pairs": [
-            { "left": "Turning off the lights", "right": "...helps to save energy." },
-            { "left": "Planting trees", "right": "...helps to clean the air." },
-            { "left": "Closing the tap", "right": "...helps to save water." },
-            { "left": "Using a reusable bottle", "right": "...helps to reduce plastic waste." }
+            {
+              "left": "Turning off the lights",
+              "right": "...helps to save energy."
+            },
+            {
+              "left": "Planting trees",
+              "right": "...helps to clean the air."
+            },
+            {
+              "left": "Closing the tap",
+              "right": "...helps to save water."
+            },
+            {
+              "left": "Using a reusable bottle",
+              "right": "...helps to reduce plastic waste."
+            }
           ]
         },
         {
@@ -28,31 +40,41 @@
               "before": "We have recycled our plastic bottles",
               "after": "last year.",
               "answer": "since",
-              "accept": ["since"]
+              "accept": [
+                "since"
+              ]
             },
             {
               "before": "My family has saved energy",
               "after": "three months.",
               "answer": "for",
-              "accept": ["for"]
+              "accept": [
+                "for"
+              ]
             },
             {
               "before": "Earth has needed our help",
               "after": "a long time.",
               "answer": "for",
-              "accept": ["for"]
+              "accept": [
+                "for"
+              ]
             },
             {
               "before": "They have planted trees",
               "after": "last Sunday.",
               "answer": "since",
-              "accept": ["since"]
+              "accept": [
+                "since"
+              ]
             },
             {
               "before": "She has used a reusable cup",
               "after": "two weeks.",
               "answer": "for",
-              "accept": ["for"]
+              "accept": [
+                "for"
+              ]
             }
           ]
         },
@@ -63,17 +85,29 @@
           "questions": [
             {
               "text": "I have ___ water since this morning.",
-              "options": ["save", "saved", "saving"],
+              "options": [
+                "save",
+                "saved",
+                "saving"
+              ],
               "answer": 1
             },
             {
               "text": "We have lived in a green house ___ five years.",
-              "options": ["for", "since", "ago"],
+              "options": [
+                "for",
+                "since",
+                "ago"
+              ],
               "answer": 0
             },
             {
               "text": "They have ___ plastic bags since 2025.",
-              "options": ["reduce", "reduces", "reduced"],
+              "options": [
+                "reduce",
+                "reduces",
+                "reduced"
+              ],
               "answer": 2
             }
           ]
@@ -84,12 +118,400 @@
           "instruction": "Put the words in the correct order. Click words to build the sentence!",
           "questions": [
             {
-              "words": ["We", "have", "recycled", "paper", "for", "two", "weeks."],
+              "words": [
+                "We",
+                "have",
+                "recycled",
+                "paper",
+                "for",
+                "two",
+                "weeks."
+              ],
               "answer": "We have recycled paper for two weeks."
             },
             {
-              "words": ["He", "has", "used", "clean", "solar", "energy", "since", "January."],
+              "words": [
+                "He",
+                "has",
+                "used",
+                "clean",
+                "solar",
+                "energy",
+                "since",
+                "January."
+              ],
               "answer": "He has used clean solar energy since January."
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary - Circle the correct option",
+          "type": "multiple_choice",
+          "instruction": "Select the correct word to complete the sentence.",
+          "questions": [
+            {
+              "text": "My good friends and I always talk to each other ___.",
+              "options": [
+                "fellow",
+                "honestly"
+              ],
+              "answer": 1
+            },
+            {
+              "text": "Sometimes we disagree, but we always ___ each other kindly.",
+              "options": [
+                "treat",
+                "pledge"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "I love and respect my grandfather, even if we have different ___ about some things.",
+              "options": [
+                "viewpoints",
+                "challenges"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "When you join the school Nature Club, you have to ___ to protect animals, plants, and our Earth.",
+              "options": [
+                "pledge",
+                "commitment"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "Any student can join that club, it's totally ___.",
+              "options": [
+                "administrators",
+                "inclusive"
+              ],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary - Unscramble the letters",
+          "type": "fill",
+          "instruction": "Unscramble the letters in parentheses to complete the paragraph.",
+          "hint": "Pay attention to the context of the school environment.",
+          "questions": [
+            {
+              "before": "When we arrive at school, the receptionist and the",
+              "after": "(a o d s t r i s n r a t m i) greet me",
+              "answer": "administrators",
+              "accept": [
+                "administrators"
+              ]
+            },
+            {
+              "before": "and my",
+              "after": "(f w l o l e) students with a smile.",
+              "answer": "fellow",
+              "accept": [
+                "fellow"
+              ]
+            },
+            {
+              "before": "In class, the teachers encourage us to express our ideas and",
+              "after": "(v w o i t e p i n s) about different topics.",
+              "answer": "viewpoints",
+              "accept": [
+                "viewpoints"
+              ]
+            },
+            {
+              "before": "At lunch time, the cafeteria",
+              "after": "(s f a t f) serve us our meals.",
+              "answer": "staff",
+              "accept": [
+                "staff"
+              ]
+            },
+            {
+              "before": "After school, I go to our school chess club where the instructor",
+              "after": "(c l e g s h a l n e) us to improve our skills.",
+              "answer": "challenges",
+              "accept": [
+                "challenges"
+              ]
+            },
+            {
+              "before": "The most important thing is that everyone",
+              "after": "(t t s a e r) everyone with respect.",
+              "answer": "treats",
+              "accept": [
+                "treats"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Grammar - For or Since? (Chart)",
+          "type": "multiple_choice",
+          "instruction": "Does the time expression use FOR or SINCE?",
+          "questions": [
+            {
+              "text": "the 1990s",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 1
+            },
+            {
+              "text": "ten months",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "two weeks",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "May 26, 2022",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 1
+            },
+            {
+              "text": "a long time",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "this morning",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 1
+            },
+            {
+              "text": "last year",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 1
+            },
+            {
+              "text": "my whole life",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "two years",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 0
+            },
+            {
+              "text": "I was in second grade",
+              "options": [
+                "For",
+                "Since"
+              ],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "title": "Grammar - Match the sentence halves",
+          "type": "match",
+          "instruction": "Match the beginning of the sentence with the correct ending.",
+          "pairs": [
+            {
+              "left": "1 I have worn glasses since",
+              "right": "d I was four years old."
+            },
+            {
+              "left": "2 I've been a student at my school for",
+              "right": "f four years."
+            },
+            {
+              "left": "3 I've sat at the same desk",
+              "right": "c since the beginning of the year."
+            },
+            {
+              "left": "4 My teacher has taught here for",
+              "right": "b 20 years."
+            },
+            {
+              "left": "5 I haven't washed my hands since",
+              "right": "a recess."
+            },
+            {
+              "left": "6 We've been in English class",
+              "right": "e for 40 minutes."
+            }
+          ]
+        },
+        {
+          "title": "Grammar - Complete the paragraph",
+          "type": "fill",
+          "instruction": "Complete the paragraph using the best time expressions (I was very young, our whole lives, 30 years, 2012, eight months, I joined the club).",
+          "hint": "Look at the prepositions 'for' and 'since' before the blanks to help you choose!",
+          "questions": [
+            {
+              "before": "Our school has had a gardening club since",
+              "after": ".",
+              "answer": "2012",
+              "accept": [
+                "2012"
+              ]
+            },
+            {
+              "before": "I've been a member for",
+              "after": ".",
+              "answer": "eight months",
+              "accept": [
+                "eight months"
+              ]
+            },
+            {
+              "before": "We've planted hundreds of plants and flowers since",
+              "after": ".",
+              "answer": "I was very young",
+              "accept": [
+                "I was very young"
+              ]
+            },
+            {
+              "before": "I've loved gardening for",
+              "after": ".",
+              "answer": "30 years",
+              "accept": [
+                "30 years"
+              ]
+            },
+            {
+              "before": "My grandfather has taught me and my brother how to take care of plants for",
+              "after": ".",
+              "answer": "our whole lives",
+              "accept": [
+                "our whole lives"
+              ]
+            },
+            {
+              "before": "He's worked as a gardener since",
+              "after": ". I hope to work as a gardener one day!",
+              "answer": "I joined the club",
+              "accept": [
+                "I joined the club"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Grammar - Write the sentences",
+          "type": "unscramble",
+          "instruction": "Build the sentences using the present perfect with 'for' or 'since'. Click the words in the correct order!",
+          "questions": [
+            {
+              "words": [
+                "Our",
+                "school",
+                "has",
+                "had",
+                "a",
+                "book",
+                "club",
+                "for",
+                "a",
+                "long",
+                "time."
+              ],
+              "answer": "Our school has had a book club for a long time."
+            },
+            {
+              "words": [
+                "I",
+                "have",
+                "volunteered",
+                "at",
+                "the",
+                "library",
+                "since",
+                "September."
+              ],
+              "answer": "I have volunteered at the library since September."
+            },
+            {
+              "words": [
+                "My",
+                "friend",
+                "Sara",
+                "has",
+                "helped",
+                "in",
+                "the",
+                "library",
+                "for",
+                "two",
+                "years."
+              ],
+              "answer": "My friend Sara has helped in the library for two years."
+            },
+            {
+              "words": [
+                "We",
+                "have",
+                "been",
+                "friends",
+                "for",
+                "our",
+                "whole",
+                "lives."
+              ],
+              "answer": "We have been friends for our whole lives."
+            },
+            {
+              "words": [
+                "We",
+                "have",
+                "loved",
+                "reading",
+                "since",
+                "we",
+                "were",
+                "in",
+                "first",
+                "grade."
+              ],
+              "answer": "We have loved reading since we were in first grade."
+            },
+            {
+              "words": [
+                "We",
+                "have",
+                "worked",
+                "on",
+                "this",
+                "project",
+                "for",
+                "three",
+                "weeks."
+              ],
+              "answer": "We have worked on this project for three weeks."
             }
           ]
         }
