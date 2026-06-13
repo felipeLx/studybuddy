@@ -1,0 +1,99 @@
+{
+  "subject": "English",
+  "icon": "📚",
+  "color": "#4A90D9",
+  "tests": [
+    {
+      "id": "unit17-bluedot4",
+      "title": "Unit 17 - Blue Dot 4 - Sustainability & Present Perfect",
+      "sections": [
+        {
+          "title": "Vocabulary - Match the columns",
+          "type": "match",
+          "instruction": "Match the action with its positive impact on nature. Drag or click to connect!",
+          "pairs": [
+            { "left": "Turning off the lights", "right": "...helps to save energy." },
+            { "left": "Planting trees", "right": "...helps to clean the air." },
+            { "left": "Closing the tap", "right": "...helps to save water." },
+            { "left": "Using a reusable bottle", "right": "...helps to reduce plastic waste." }
+          ]
+        },
+        {
+          "title": "For or Since?",
+          "type": "fill",
+          "instruction": "Complete the sentences with FOR or SINCE",
+          "hint": "SINCE = when it started (since Monday, since 2024). FOR = how long (for 2 hours, for 5 years).",
+          "questions": [
+            {
+              "before": "We have recycled our plastic bottles",
+              "after": "last year.",
+              "answer": "since",
+              "accept": ["since"]
+            },
+            {
+              "before": "My family has saved energy",
+              "after": "three months.",
+              "answer": "for",
+              "accept": ["for"]
+            },
+            {
+              "before": "Earth has needed our help",
+              "after": "a long time.",
+              "answer": "for",
+              "accept": ["for"]
+            },
+            {
+              "before": "They have planted trees",
+              "after": "last Sunday.",
+              "answer": "since",
+              "accept": ["since"]
+            },
+            {
+              "before": "She has used a reusable cup",
+              "after": "two weeks.",
+              "answer": "for",
+              "accept": ["for"]
+            }
+          ]
+        },
+        {
+          "title": "Choose the correct option",
+          "type": "multiple_choice",
+          "instruction": "Select the correct answer to complete each sentence.",
+          "questions": [
+            {
+              "text": "I have ___ water since this morning.",
+              "options": ["save", "saved", "saving"],
+              "answer": 1
+            },
+            {
+              "text": "We have lived in a green house ___ five years.",
+              "options": ["for", "since", "ago"],
+              "answer": 0
+            },
+            {
+              "text": "They have ___ plastic bags since 2025.",
+              "options": ["reduce", "reduces", "reduced"],
+              "answer": 2
+            }
+          ]
+        },
+        {
+          "title": "Unscramble the sentences",
+          "type": "unscramble",
+          "instruction": "Put the words in the correct order. Click words to build the sentence!",
+          "questions": [
+            {
+              "words": ["We", "have", "recycled", "paper", "for", "two", "weeks."],
+              "answer": "We have recycled paper for two weeks."
+            },
+            {
+              "words": ["He", "has", "used", "clean", "solar", "energy", "since", "January."],
+              "answer": "He has used clean solar energy since January."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
