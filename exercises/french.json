@@ -132,6 +132,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "production-ecrite-a1",
+      "title": "Production Écrite - Exercícios de Escrita",
+      "sections": [
+        {
+          "title": "Escreva a frase completa",
+          "type": "fill_long",
+          "instruction": "Observe a descrição em português e escreva a frase completa em francês usando o verbo 'porter' e as cores.",
+          "questions": [
+            {
+              "prompt": "Ele usa um chapéu preto.",
+              "answer": "Il porte un chapeau noir."
+            },
+            {
+              "prompt": "Nós usamos calças azuis.",
+              "answer": "Nous portons un pantalon bleu."
+            },
+            {
+              "prompt": "Eu uso botas marrons.",
+              "answer": "Je porte des bottes marron."
+            }
+          ]
+        },
+        {
+          "title": "Descreva o que você veste",
+          "type": "free_text",
+          "instruction": "Escreva uma frase descrevendo o que você está vestindo hoje (Ex: Je porte...)",
+          "questions": [
+            {
+              "text": "O que você veste hoje?",
+              "answer_hint": "Esperado: Je porte [peça de roupa] [cor]."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

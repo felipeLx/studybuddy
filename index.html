@@ -393,6 +393,89 @@
     display: none;
   }
 
+  /* Fill long (write full sentence) */
+  .fill-long-question {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .fill-long-question:last-child { border-bottom: none; }
+  .fill-long-prompt {
+    font-size: 1.05em;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .fill-long-prompt .number { font-weight: 700; color: var(--accent); }
+  .fill-long-prompt .lang-tag {
+    font-size: 0.75em;
+    background: #edf2f7;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+  .fill-long-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    outline: none;
+    resize: vertical;
+    min-height: 44px;
+    transition: border-color 0.2s;
+  }
+  .fill-long-input:focus { border-color: var(--accent); }
+  .fill-long-input.correct { border-color: var(--correct); background: #f0fff4; }
+  .fill-long-input.wrong { border-color: var(--wrong); background: #fff5f5; }
+  .fill-long-correction {
+    font-size: 0.88em;
+    color: var(--correct);
+    font-weight: 600;
+    margin-top: 6px;
+    display: none;
+  }
+
+  /* Free text (open writing) */
+  .free-text-question {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .free-text-question:last-child { border-bottom: none; }
+  .free-text-question .q-text {
+    font-size: 1.05em;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .free-text-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    outline: none;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.2s;
+  }
+  .free-text-input:focus { border-color: var(--accent); }
+  .free-text-input.submitted { border-color: var(--correct); background: #f0fff4; }
+  .free-text-hint {
+    font-size: 0.85em;
+    color: var(--accent);
+    margin-top: 6px;
+    display: none;
+    padding: 8px 12px;
+    background: #ebf8ff;
+    border-radius: 6px;
+  }
+
   /* Feedback animation */
   .feedback-popup {
     position: fixed;
@@ -652,12 +735,14 @@ function renderSection() {
     case 'multiple_choice': renderMC(area, section); break;
     case 'match': renderMatch(area, section); break;
     case 'unscramble': renderUnscramble(area, section); break;
+    case 'fill_long': renderFillLong(area, section); break;
+    case 'free_text': renderFreeText(area, section); break;
     default: area.innerHTML = '<p>Unknown exercise type.</p>';
   }
 }
 
 function getSectionIcon(type) {
-  const icons = { fill: '✏️', multiple_choice: '🔘', match: '🔗', unscramble: '🧩' };
+  const icons = { fill: '✏️', multiple_choice: '🔘', match: '🔗', unscramble: '🧩', fill_long: '📝', free_text: '✍️' };
   return icons[type] || '📝';
 }
 
@@ -826,6 +911,42 @@ function renderBuiltSentence(qi) {
   ).join('');
 }
 
+// Fill long (write full sentence)
+function renderFillLong(area, section) {
+  sectionAnswers = {};
+  let html = '';
+  section.questions.forEach((q, i) => {
+    html += `
+      <div class="fill-long-question">
+        <div class="fill-long-prompt">
+          <span class="number">${i+1}.</span>
+          <span class="lang-tag">PT</span>
+          <span>${q.prompt}</span>
+        </div>
+        <textarea class="fill-long-input" id="flong-${i}" placeholder="Write the sentence in French..."
+                  oninput="sectionAnswers[${i}] = this.value" rows="1"></textarea>
+        <div class="fill-long-correction" id="flong-corr-${i}"></div>
+      </div>`;
+  });
+  area.innerHTML = html;
+}
+
+// Free text (open writing)
+function renderFreeText(area, section) {
+  sectionAnswers = {};
+  let html = '';
+  section.questions.forEach((q, i) => {
+    html += `
+      <div class="free-text-question">
+        <div class="q-text">${i+1}. ${q.text}</div>
+        <textarea class="free-text-input" id="ftext-${i}" placeholder="Write your answer in French..."
+                  oninput="sectionAnswers[${i}] = this.value" rows="3"></textarea>
+        <div class="free-text-hint" id="ftext-hint-${i}">💡 ${q.answer_hint}</div>
+      </div>`;
+  });
+  area.innerHTML = html;
+}
+
 // Check answers
 function checkSection() {
   const section = currentTest.sections[currentSectionIdx];
@@ -921,6 +1042,36 @@ function checkSection() {
         }
       });
       break;
+
+    case 'fill_long':
+      section.questions.forEach((q, i) => {
+        total++;
+        const input = document.getElementById(`flong-${i}`);
+        const corr = document.getElementById(`flong-corr-${i}`);
+        const val = (input.value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+        const expected = q.answer.toLowerCase().replace(/\s+/g, ' ');
+        if (val === expected) {
+          correct++;
+          input.classList.add('correct');
+        } else {
+          input.classList.add('wrong');
+          corr.textContent = `✓ ${q.answer}`;
+          corr.style.display = 'block';
+        }
+        input.disabled = true;
+      });
+      break;
+
+    case 'free_text':
+      section.questions.forEach((q, i) => {
+        const input = document.getElementById(`ftext-${i}`);
+        const hint = document.getElementById(`ftext-hint-${i}`);
+        input.classList.add('submitted');
+        input.disabled = true;
+        hint.style.display = 'block';
+      });
+      total = 0;
+      break;
   }
 
   totalCorrect += correct;
@@ -934,6 +1085,7 @@ function checkSection() {
 }
 
 function showFeedback(correct, total) {
+  if (total === 0) { showFeedback(1, 1); return; }
   const ratio = correct / total;
   let emoji;
   if (ratio === 1) emoji = '🎉';
