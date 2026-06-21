@@ -1,0 +1,137 @@
+{
+  "subject": "French",
+  "icon": "🇫🇷",
+  "color": "#1E3A8A",
+  "tests": [
+    {
+      "id": "vetements-a1",
+      "title": "Les Vêtements, Accessoires, Couleurs & Verbes Porter/Être",
+      "sections": [
+        {
+          "title": "Les Vêtements - Match the clothing",
+          "type": "match",
+          "instruction": "Match the French word to its English meaning.",
+          "pairs": [
+            { "left": "Le pull", "right": "Sweater" },
+            { "left": "La robe", "right": "Dress" },
+            { "left": "Les bottes", "right": "Boots" },
+            { "left": "Le manteau", "right": "Coat" },
+            { "left": "La jupe", "right": "Skirt" }
+          ]
+        },
+        {
+          "title": "Les Couleurs - What color is it?",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct French color.",
+          "questions": [
+            {
+              "text": "🖤 This color in French is ___.",
+              "options": ["Noir", "Bleu", "Marron"],
+              "answer": 0
+            },
+            {
+              "text": "💛 This color in French is ___.",
+              "options": ["Orange", "Jaune", "Rouge"],
+              "answer": 1
+            },
+            {
+              "text": "💗 This color in French is ___.",
+              "options": ["Rouge", "Rose", "Gris"],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "title": "Le verbe PORTER - Conjugation",
+          "type": "fill",
+          "instruction": "Complete with the correct form of PORTER (to wear).",
+          "hint": "Je porte, Tu portes, Il/elle porte, Nous portons, Vous portez, Ils/elles portent",
+          "questions": [
+            {
+              "before": "Je",
+              "after": "un t-shirt bleu.",
+              "answer": "porte",
+              "accept": ["porte"]
+            },
+            {
+              "before": "Nous",
+              "after": "des chaussettes blanches.",
+              "answer": "portons",
+              "accept": ["portons"]
+            },
+            {
+              "before": "Ils",
+              "after": "des baskets vertes.",
+              "answer": "portent",
+              "accept": ["portent"]
+            },
+            {
+              "before": "Tu",
+              "after": "une casquette rouge.",
+              "answer": "portes",
+              "accept": ["portes"]
+            },
+            {
+              "before": "Elle",
+              "after": "une robe rose.",
+              "answer": "porte",
+              "accept": ["porte"]
+            },
+            {
+              "before": "Vous",
+              "after": "un manteau noir.",
+              "answer": "portez",
+              "accept": ["portez"]
+            }
+          ]
+        },
+        {
+          "title": "Les Accessoires & Vêtements - Choose the right word",
+          "type": "multiple_choice",
+          "instruction": "Select the correct French word for each item.",
+          "questions": [
+            {
+              "text": "🧤 Gloves in French:",
+              "options": ["Les gants", "Les bottes", "L'écharpe"],
+              "answer": 0
+            },
+            {
+              "text": "👟 Sneakers in French:",
+              "options": ["Les chaussures", "Les baskets", "Les chaussettes"],
+              "answer": 1
+            },
+            {
+              "text": "🧣 Scarf in French:",
+              "options": ["La ceinture", "Le chapeau", "L'écharpe"],
+              "answer": 2
+            },
+            {
+              "text": "👗 What is \"Le pantalon\"?",
+              "options": ["Dress", "Pants", "Skirt"],
+              "answer": 1
+            }
+          ]
+        },
+        {
+          "title": "Build the sentence!",
+          "type": "unscramble",
+          "instruction": "Put the words in order to describe what someone is wearing.",
+          "questions": [
+            {
+              "words": ["Je", "porte", "un", "pull", "vert."],
+              "answer": "Je porte un pull vert."
+            },
+            {
+              "words": ["Elle", "porte", "une", "jupe", "rouge."],
+              "answer": "Elle porte une jupe rouge."
+            },
+            {
+              "words": ["Nous", "portons", "des", "baskets", "blanches."],
+              "answer": "Nous portons des baskets blanches."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
